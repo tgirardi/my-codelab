@@ -1,0 +1,17 @@
+{% extends "/views/base.html" %}
+
+{% block main %}
+  {{doc.html|safe}}
+
+  <ul class="people">
+    {% for person in doc.people %}
+      <li>
+        <div>
+          <h3>{{_(person.name)}}</h3>
+          <h4>{{_(person.title)}}</h4>
+          <p>{{_(person.bio)}}
+        </div>
+    {% endfor %}
+  </ul>
+
+{% endblock %}
